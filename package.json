@@ -1,0 +1,19 @@
+{
+  "name": "lite-core",
+  "version": "0.1.0-dev",
+  "description": "The core of the lite runtime framework",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"No test policies.\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Fenying",
+  "license": "MIT",
+  "types": "./dist/index.d.ts",
+  "typings": "./dist/index.d.ts",
+  "dependencies": {
+    "@types/async": "^2.0.37",
+    "@types/node": "^6.0.53",
+    "async": "^2.1.4"
+  }
+}
