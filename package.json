@@ -8,9 +8,17 @@
   },
   "keywords": [],
   "author": "Fenying",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "types": "./dist/index.d.ts",
   "typings": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fenying/lite-core.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fenying/lite-core/issues"
+  },
+  "homepage": "https://github.com/fenying/lite-core#readme",
   "dependencies": {
     "@types/async": "^2.0.37",
     "@types/node": "^6.0.53",
