@@ -1,6 +1,6 @@
 {
   "name": "lite-core",
-  "version": "0.1.0-dev",
+  "version": "0.1.0-alpha-1",
   "description": "The core of the lite runtime framework",
   "main": "./dist/index.js",
   "scripts": {
@@ -22,6 +22,7 @@
   "dependencies": {
     "@types/async": "^2.0.37",
     "@types/node": "^6.0.53",
-    "async": "^2.1.4"
+    "async": "^2.1.4",
+    "langext": "^1.2.1-rc-2"
   }
 }
