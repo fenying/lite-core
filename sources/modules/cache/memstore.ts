@@ -1,20 +1,20 @@
 import { HashMap, StdAsyncCallback } from "../common";
 
-import async = require("async");
+import libAsync = require("libasync");
 
 export interface IMemoryTable<T> {
 
     /**
      * Add a value if the specific key if not existing.
-     * 
+     *
      * Params:
-     * 
+     *
      * - `EXPIRES: Date|number`
-     * 
+     *
      * If EXPIRES is typeof Date, the new key will be expired
      * at that time.
      *
-     * Or if EXPIRES is less then milliseconds of one year, 
+     * Or if EXPIRES is less then milliseconds of one year,
      * the new key will be expired in EXPIRES ms; if EXPIRES
      * is larger then milliseconds of one year, it will be
      * considered as a Unix timestamp (ms), and the new key
@@ -470,7 +470,7 @@ class MemoryTable<T> implements IMemoryTable<T> {
 
         let now: number = new Date().getTime();
 
-        async.forEachOfSeries(this.spaces, function(item: MemoryNode<T>, key: string, next: StdAsyncCallback): void {
+        libAsync.forEach.series(this.spaces, function(item: MemoryNode<T>, key: string, next: StdAsyncCallback): void {
 
             if (item && item.expires !== undefined && item.expires < now) {
 

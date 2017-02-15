@@ -1,6 +1,6 @@
 import { HashMap } from "../common";
 import * as Results from "./result";
-import libAsync = require("async");
+import libAsync = require("libasync");
 import Refer = require("./reference");
 
 export interface EventNextCallback {
@@ -143,7 +143,7 @@ export abstract class EventEmitter<T> {
 
             refer.refer();
 
-            libAsync.eachOfSeries<EventListener<T>, Error>(
+            libAsync.forEach.series<EventListener<T>, Error>(
 
                 evQueue,
 

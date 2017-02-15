@@ -1,3 +1,4 @@
+import libAsync = require("libasync");
 
 export class Exception {
 
@@ -37,6 +38,4 @@ export interface HashMap<T> {
     [key: string]: T;
 }
 
-export interface StdAsyncCallback {
-    (error?: Exception): void;
-}
+export type StdAsyncCallback = libAsync.AsyncErrorCallback<Exception>;
