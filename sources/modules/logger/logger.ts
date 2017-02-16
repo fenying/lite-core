@@ -69,6 +69,7 @@ export abstract class Logger {
         } else {
 
             next && setImmediate(next, new Exception(
+                "BAD-LOGGER",
                 "The writer of default type doesn't exist."
             ));
         }

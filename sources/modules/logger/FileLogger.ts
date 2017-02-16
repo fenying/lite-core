@@ -17,7 +17,7 @@ export class FileLogger extends Logger {
 
                 if (err) {
 
-                    callback(new Exception(err.message));
+                    callback(new Exception(err.name, err.message));
 
                 } else {
 
@@ -43,7 +43,7 @@ export class FileLogger extends Logger {
 
                     if (err) {
 
-                        return next(new Exception(err.message));
+                        return next(new Exception(err.name, err.message));
                     }
 
                     next();

@@ -6,9 +6,9 @@ export class Exception {
 
     protected _name: string;
 
-    public constructor(msg: string, code?: string) {
+    public constructor(name: string, msg?: string) {
 
-        this._name = code;
+        this._name = name;
         this._msg = msg;
     }
 
