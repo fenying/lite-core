@@ -1,7 +1,7 @@
-
+import libAsync = require("libasync");
 import NodeFS = require("fs");
 
-import { StdAsyncCallback, Exception } from "../common";
+import { Exception } from "../common";
 
 import { Logger, LoggerWriter } from "./logger";
 
@@ -34,11 +34,11 @@ export class FileLogger extends Logger {
 
     private static generateBuiltInWriter(level: string): LoggerWriter {
 
-        return function(this: FileLogger, text: string, next: StdAsyncCallback): void {
+        return function(this: FileLogger, text: string, next: libAsync.AsyncErrorCallback<Exception>): void {
 
             NodeFS.write(
                 this.filePointer,
-                this.timeGenerator() + ` - ${level} - ${text}\n`,
+                `${this.timeGenerator()} - ${level} - ${text}\n`,
                 function(err: Error, written: number): void {
 
                     if (err) {

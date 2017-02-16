@@ -37,5 +37,3 @@ export interface HashMap<T> {
 
     [key: string]: T;
 }
-
-export type StdAsyncCallback = libAsync.AsyncErrorCallback<Exception>;

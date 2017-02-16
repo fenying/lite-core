@@ -1,9 +1,10 @@
+import libAsync = require("libasync");
 
-import { StdAsyncCallback, Exception, HashMap } from "../common";
+import { Exception, HashMap } from "../common";
 
 export interface LoggerWriter {
 
-    (this: Logger, data: string, next: StdAsyncCallback): void;
+    (this: Logger, data: string, next: libAsync.AsyncErrorCallback<Exception>): void;
 }
 
 export interface LoggerTimeGenerator {
@@ -26,7 +27,7 @@ export abstract class Logger {
     }
 
     /**
-     * Set the formatter of time. 
+     * Set the formatter of time.
      */
     public set timeFormatter(newVal: LoggerTimeGenerator) {
 
@@ -40,7 +41,7 @@ export abstract class Logger {
 
     /**
      * Register a new type of logging method.
-     * 
+     *
      * If a one existed, the old one will be overwritten.
      */
     public registerType(type: string, writer: LoggerWriter): Logger {
@@ -53,7 +54,7 @@ export abstract class Logger {
     /**
      * Write a piece of log, and get the result in async way, if necessary.
      */
-    public write(data: any, type?: string, next?: StdAsyncCallback): Logger {
+    public write(data: any, type?: string, next?: libAsync.AsyncErrorCallback<Exception>): Logger {
 
         let writer: LoggerWriter = this.writers[type ? type : "default"];
 
