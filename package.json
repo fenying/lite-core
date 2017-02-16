@@ -1,6 +1,6 @@
 {
   "name": "lite-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The core of the lite runtime framework",
   "main": "./dist/index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   "homepage": "https://github.com/fenying/lite-core#readme",
   "dependencies": {
     "langext": "^1.2.1-rc-2",
-    "libasync": "0.1.0-a5"
+    "libasync": "^0.1.0-a5"
   },
   "devDependencies": {
     "@types/node": "^7.0.5"

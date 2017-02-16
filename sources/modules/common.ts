@@ -2,34 +2,34 @@ import libAsync = require("libasync");
 
 export class Exception {
 
-    protected msg: string;
+    protected _msg: string;
 
-    protected num: number;
+    protected _name: string;
 
-    public constructor(msg: string, code?: number) {
+    public constructor(msg: string, code?: string) {
 
-        this.num = code;
-        this.msg = msg;
+        this._name = code;
+        this._msg = msg;
     }
 
-    public get code(): number {
+    public get name(): string {
 
-        return this.num;
+        return this._name;
     }
 
-    public getCode(): number {
+    public getName(): string {
 
-        return this.num;
+        return this._name;
     }
 
     public get message(): string {
 
-        return this.msg;
+        return this._msg;
     }
 
     public getMessage(): string {
 
-        return this.msg;
+        return this._msg;
     }
 }
 
