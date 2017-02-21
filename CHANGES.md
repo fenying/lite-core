@@ -1,5 +1,9 @@
 # CHANGES
 
+## v1.1.0
+
+- Added simple cache.
+
 ## v1.0.3
 
 - Enhanced the class Exception.
