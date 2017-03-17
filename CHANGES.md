@@ -1,5 +1,9 @@
 # CHANGES
 
+## v1.1.1
+
+- Use localtime instead of UTC time in logger.
+
 ## v1.1.0
 
 - Added simple cache.

@@ -23,7 +23,4 @@ export class Exception {
     }
 }
 
-export interface HashMap<T> {
-
-    [key: string]: T;
-}
+export type HashMap<T> = libAsync.Dictionary<T>;

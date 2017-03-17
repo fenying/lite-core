@@ -18,7 +18,7 @@ export abstract class Logger {
 
     protected timeGenerator: LoggerTimeGenerator = function(): string {
 
-        return new Date().toUTCString();
+        return new Date().toString();
     };
 
     public constructor() {
